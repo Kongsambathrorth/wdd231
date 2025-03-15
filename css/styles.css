@@ -1,0 +1,26 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0; /* Add your preferred background */
+  padding: 20px;
+}
+
+.profile-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 10px;
+}
+
+.header span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
