@@ -2,15 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-
-}
-
-/* Body Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
-  line-height: 1.6;
 }
 
 /* Header */
@@ -21,7 +12,6 @@ header {
   padding: 1rem;
   background-color: #164E70;
   color: #fff;
-
 }
 
 header img {
@@ -30,17 +20,15 @@ header img {
   margin-right: 1rem;
 }
 
-.nav_bar{
-  background-color: #1f1e1e;
-  justify-items: center;
-  font-size: larger;
-
-
-}
-
 header span {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.nav_bar {
+  background-color: #1f1e1e;
+  justify-items: center;
+  font-size: larger;
 }
 
 nav ul {
@@ -60,6 +48,8 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+/* Body */
 body {
   font-family: Arial, sans-serif;
 }
@@ -69,7 +59,6 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   background-color: rgb(240, 233, 233);
-
 }
 
 .child-container {
@@ -83,20 +72,12 @@ body {
 .row {
   margin: 5px 0;
   padding: 10px;
-
-
-}
-
-.card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .card {
   padding: 10px;
   background-color: #f9f9f9;
-  flex: 1 1 calc(33.33% - 20px); /* Three cards per row by default */
+  flex: 1 1 calc(33.33% - 20px);
   text-align: center;
 }
 
@@ -104,24 +85,21 @@ img {
   max-width: 30%;
   height: auto;
   display: block;
-  margin: 10px 0;  
-  
+  margin: 10px 0;
 }
 
 .center-container {
   display: flex;
-  flex-direction: column; /* Stack image and text vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: top; /* Center vertically */
-  /*height: 100vh; /* Adjust as needed for the container size */
-  text-align: center; /* Center text below the image */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
 }
 
 .center-container img {
-  max-width: 30%; /* Ensure the image scales within the container */
-  height: auto; /* Maintain image aspect ratio */
+  max-width: 30%;
+  height: auto;
 }
-
 
 /* Desktop Layout */
 @media (min-width: 1024px) {
@@ -131,11 +109,11 @@ img {
 
   .child-container:first-child,
   .child-container:nth-child(2) {
-    flex: 1; /* Take equal space side by side */
+    flex: 1;
   }
 
   .child-container:nth-child(3) {
-    flex: 1 1 100%; /* Full width below first two containers */
+    flex: 1 1 100%;
   }
 }
 
@@ -146,98 +124,88 @@ img {
   }
 
   .child-container {
-    flex: 1 1 100%; /* Full width for all containers */
+    flex: 1 1 100%;
   }
 
   .card {
-    flex: 1 1 100%; /* One card per row on smaller screens */
+    flex: 1 1 100%;
   }
 }
 
-
+/* Header, Footer, and Section Titles */
 header, footer, .header1 {
   text-align: center;
-  background-color: #164E70; /* Light blue */
+  background-color: #164E70;
   padding: 10px;
   margin: 5px 0;
   font-family: Arial, sans-serif;
   font-size: 18px;
-  font-weight:bold;
-  color:#fff;
+  font-weight: bold;
+  color: #fff;
 }
 
- footer{
-  text-align: center;
-  background-color: #164E70; /* Light blue */
-  padding: 10px;
-  margin: 5px 0;
-  font-family: Arial, sans-serif;
+footer {
   font-size: 14px;
-  color:#fff;
 }
 
+/* Button Container */
 .button-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  gap: 10px; /* Add spacing between buttons */
-  height: 100%; /* Ensure the container has sufficient height */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .button1, .button2, .button3 {
   background-color: #333;
   color: #fff;
-  padding: 10px 20px; /* Uniform padding for all buttons */
-  width: 100px; /* Set a fixed width for all buttons */
-  text-align: center; /* Center the text inside the button */
-  border: none; /* Optional: Remove border */
-  border-radius: 6px; /* Add rounded corners */
-  cursor: pointer; /* Add pointer cursor for interactivity */
+  padding: 10px 20px;
+  width: 100px;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .button1:hover, .button2:hover, .button3:hover {
-  background-color: #555; /* Optional hover effect */
+  background-color: #555;
 }
 
+/* Card Styling */
 .row-course {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
-  gap: 15px; /* Space between cards */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
   padding: 20px;
-
 }
 
 .card {
-  display: flex; /* Enables Flexbox for the card */
-  justify-content: center; /* Centers text horizontally */
-  align-items: center; /* Centers text vertically */
-  text-align: center; /* Ensures proper text alignment for multi-line text */
-  padding: 20px; /* Space inside the card */
-  border-radius: 10px; /* Keeps rounded corners */
-  font-weight: bold; /* Ensures bold text */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for visual depth */
-}
-
-
-/* Background color for type A cards (brown) */
-.type-a {
-  background-color: #521d04; /* SaddleBrown color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
   font-weight: bold;
-  color:#fffbfb
-  
-  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Background color for type B cards (gray) */
+/* Card Colors */
+.type-a {
+  background-color: #521d04;
+  color: #fffbfb;
+  font-weight: bold;
+}
+
 .type-b {
-  background-color: #bcc1c3; /* Gray color */
+  background-color: #bcc1c3;
   color: #070707;
   font-weight: bold;
 }
 
-/* Responsive Design for Mobile */
+/* Mobile-Specific Design */
 @media (max-width: 768px) {
   .row-course {
-    grid-template-columns: 1fr; /* 1 column for mobile */
+    grid-template-columns: 1fr;
   }
 }
