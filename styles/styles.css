@@ -1,0 +1,243 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #164E70;
+  color: #fff;
+
+}
+
+header img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.nav_bar{
+  background-color: #1f1e1e;
+  justify-items: center;
+  font-size: larger;
+
+
+}
+
+header span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: rgb(240, 233, 233);
+
+}
+
+.child-container {
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.row {
+  margin: 5px 0;
+  padding: 10px;
+
+
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  padding: 10px;
+  background-color: #f9f9f9;
+  flex: 1 1 calc(33.33% - 20px); /* Three cards per row by default */
+  text-align: center;
+}
+
+img {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  margin: 10px 0;  
+  
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: top; /* Center vertically */
+  /*height: 100vh; /* Adjust as needed for the container size */
+  text-align: center; /* Center text below the image */
+}
+
+.center-container img {
+  max-width: 30%; /* Ensure the image scales within the container */
+  height: auto; /* Maintain image aspect ratio */
+}
+
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+  .parent-container {
+    flex-direction: row;
+  }
+
+  .child-container:first-child,
+  .child-container:nth-child(2) {
+    flex: 1; /* Take equal space side by side */
+  }
+
+  .child-container:nth-child(3) {
+    flex: 1 1 100%; /* Full width below first two containers */
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 1023px) {
+  .parent-container {
+    flex-direction: column;
+  }
+
+  .child-container {
+    flex: 1 1 100%; /* Full width for all containers */
+  }
+
+  .card {
+    flex: 1 1 100%; /* One card per row on smaller screens */
+  }
+}
+
+
+header, footer, .header1 {
+  text-align: center;
+  background-color: #164E70; /* Light blue */
+  padding: 10px;
+  margin: 5px 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight:bold;
+  color:#fff;
+}
+
+ footer{
+  text-align: center;
+  background-color: #164E70; /* Light blue */
+  padding: 10px;
+  margin: 5px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color:#fff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 10px; /* Add spacing between buttons */
+  height: 100%; /* Ensure the container has sufficient height */
+}
+
+.button1, .button2, .button3 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px; /* Uniform padding for all buttons */
+  width: 100px; /* Set a fixed width for all buttons */
+  text-align: center; /* Center the text inside the button */
+  border: none; /* Optional: Remove border */
+  border-radius: 6px; /* Add rounded corners */
+  cursor: pointer; /* Add pointer cursor for interactivity */
+}
+
+.button1:hover, .button2:hover, .button3:hover {
+  background-color: #555; /* Optional hover effect */
+}
+
+.row-course {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  gap: 15px; /* Space between cards */
+  padding: 20px;
+
+}
+
+.card {
+  display: flex; /* Enables Flexbox for the card */
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  text-align: center; /* Ensures proper text alignment for multi-line text */
+  padding: 20px; /* Space inside the card */
+  border-radius: 10px; /* Keeps rounded corners */
+  font-weight: bold; /* Ensures bold text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for visual depth */
+}
+
+
+/* Background color for type A cards (brown) */
+.type-a {
+  background-color: #521d04; /* SaddleBrown color */
+  font-weight: bold;
+  color:#fffbfb
+  
+  
+}
+
+/* Background color for type B cards (gray) */
+.type-b {
+  background-color: #bcc1c3; /* Gray color */
+  color: #070707;
+  font-weight: bold;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .row-course {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}
