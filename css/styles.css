@@ -1,0 +1,407 @@
+
+/* Variables */
+:root {
+    --primary: #0d0d0e;
+    --secondary: #FFB703;
+    --accent: #023047;
+    --accent2: #FB8500;
+    --black: #020E12;
+    --lightGray: #e4e4e4;
+    --white: #FFFFFF;
+    --soft-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+    --font: 'Urbanist', sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+/* Body Styling */
+body {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    background-color: var(--lightGray);
+    color: var(--accent);
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styling */
+/* Header Styling */
+header {
+  background: var(--accent);
+  color: white;
+  
+  text-align: center;
+  grid-template-columns: 1fr 1fr; /* Two columns for logo and title */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+}
+
+
+.logo-profile {
+  width: 50px; /* Adjust the size of the logo */
+  border-radius: 5%; /* Optional: Make the logo circular */
+}
+
+.img-location{
+  width:50%; /* Adjust the size of the logo */
+  border-radius: 5%; /* Optional: Make the logo circular */
+
+}
+.header-title {
+  font-size: 1.4rem; /* Adjust the font size */
+  font-weight: bold;
+  color:white;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+/* Navigation Bar */
+.primary-nav {
+    background-color: var(--primary);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: var(--soft-shadow);
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white);
+    transition: color 200ms ease-in-out;
+}
+
+.nav-list a:hover {
+    color: var(--accent2);
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    background: var(--white);
+    margin: 0 auto;
+    box-shadow: var(--soft-shadow);
+    border-radius: 5px;
+  
+   
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    background-color: #023047;
+    color: whitesmoke;
+    padding: auto;
+   text-align:center ;
+   gap: 2rem;
+   
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    background-color: #023047;
+    color: whitesmoke;
+    padding: auto;
+   text-align:center ;
+   gap: 2rem;
+   
+}
+
+h5 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  background-color: #023047;
+  color: whitesmoke;
+  padding: auto;
+ text-align:center ;
+ gap: 2rem;
+ 
+}
+
+/* Footer Styling */
+footer {
+    background: var(--accent);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+
+footer p {
+    font-size: 1.6rem;
+}
+
+/* Buttons */
+
+.button-group {
+  background-color: #f8f2f2d9;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: none;
+    box-shadow: var(--soft-shadow);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 8px;
+    ;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn:hover {
+    background-color: var(--accent2);
+}
+
+/* Styling for Separate Section */
+.separate-section {
+    display: block;
+    width: 100%;
+   
+    background-color: #f8f2f2d9;
+}
+
+.separate-section .item3 {
+    text-align: center;
+    background-color: var(--accent2);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: var(--soft-shadow);
+}
+
+/* Styling for buttons inside Element 3 */
+.separate-section .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0;
+}
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    padding:0;
+    border-radius: 8px;
+    box-shadow: var(--soft-shadow);
+    text-align: center;
+    border-radius: 5%;
+    font-size: 1.4rem;
+}
+
+.card h4 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+
+/* Grid Layout for Main Section */
+.grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  
+
+    margin: 0 auto;
+    width: 100%;
+}
+
+.grid-item {
+    background-color: var(--lightGray);
+    border-radius: 8px;
+    box-shadow: var(--soft-shadow);
+    text-align: center;
+    display: flex;
+  
+}
+
+/* Make Element 1 span 2 columns */
+.grid-item-large {
+    grid-column: span 3;
+    display: grid;
+    align-items: center;
+    margin-top: 2.1%;
+    background-color: #faf6f6d9;
+
+}
+
+/* Element 2 stays in its default size */
+.grid-item-small {
+    grid-column: span 1;
+    display: grid;
+    align-items: center;
+    padding-left: 3%;
+    background-color: #f8f2f2d9;
+   
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+    .grid-container1 {
+        grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+    }
+
+    .grid-item-large {
+        grid-column: 1 / 3; /* Spans 2 columns */
+    }
+
+    .grid-item-small {
+        grid-column: 1 / 2; /* Spans 1 column */
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+ 
+    .separate-section {
+        padding: 1rem;
+    }
+
+    .separate-section .item3 {
+        padding: 1rem;
+    }
+
+    .btn {
+        font-size: 1.6rem;
+       
+    }
+}
+
+/* Styling for brown cards */
+.brown-card {
+  background-color: #411805; /* Brown background color */
+  color: var(--white); /* Ensure text is readable */
+  padding: 0;
+  
+}
+
+
+/* Hero Section */
+.hero-section {
+  width: 100%; /* Full width */
+  height: auto; /* Adjust height automatically */
+  overflow: hidden; /* Ensure no overflow */
+  position: relative; /* For positioning child elements if needed */
+}
+
+.hero-image {
+  width: 100%; /* Make the image span the full width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container */
+  display: block; /* Remove inline spacing */
+}
+
+
+/* Grid Layout for Directory Section */
+.grid-container-drectory {
+  display: grid; /* Enable grid layout */
+  grid-template-columns: 2fr 1fr 1fr; /* First column is double the size of the other two */
+  gap: 2rem; /* Add spacing between grid items */
+  padding: 2rem;
+  width: 100%; /* Ensure the grid spans the full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.grid-item-large-directory {
+ 
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow); /* Optional: Add shadow for better visibility */
+  text-align: center;
+  grid-column: span 1; /* Default behavior */
+}
+
+.grid-item-small-directory {
+ 
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow); /* Optional: Add shadow for better visibility */
+  text-align: center;
+  grid-column: span 1; /* Default behavior */
+}
+
+/* Business Section */
+.business-section {
+  padding: 2rem;
+}
+
+.view-toggle {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Grid View */
+#business-cards.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 1rem; /* Space between cards */
+}
+
+/* List View */
+#business-cards.list-view {
+  display: block; /* Stack items vertically */
+}
+
+.business-card {
+  background-color: var(--lightGray);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+  text-align: center;
+  margin-bottom: 1rem; /* Add spacing between cards in list view */
+}
+
+.business-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
