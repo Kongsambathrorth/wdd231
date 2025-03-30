@@ -1,10 +1,11 @@
 [
+    
     {
       "name": "Tech Innovators",
       "address": "123 Silicon Avenue, Tech City",
       "phone": "+1 123-456-7890",
-      "website": "https://www.techinnovators.com",
-      "image": "tech_innovators.png",
+      "website": "https://www.rifacademy.org",
+      "image": "sambathrorth.png",
       "membershipLevel": 3,
       "description": "Leading tech company focused on AI and machine learning."
     },
@@ -12,8 +13,8 @@
       "name": "Eco Builders",
       "address": "456 Green Lane, Eco Town",
       "phone": "+1 987-654-3210",
-      "website": "https://www.ecobuilders.com",
-      "image": "eco_builders.png",
+      "website": "https://www.rifacademy.org",
+      "image": "apple.jpeg",
       "membershipLevel": 2,
       "description": "Construction company specializing in eco-friendly buildings."
     },
@@ -21,8 +22,8 @@
       "name": "Global Traders",
       "address": "789 Trade Street, Business City",
       "phone": "+1 555-123-4567",
-      "website": "https://www.globaltraders.com",
-      "image": "global_traders.png",
+      "website": "https://www.rifacademy.org",
+      "image": "tree.jpeg",
       "membershipLevel": 1,
       "description": "International trading company operating worldwide."
     },
@@ -31,7 +32,7 @@
       "address": "321 Art Boulevard, Design Town",
       "phone": "+1 444-555-6666",
       "website": "https://www.creativedesigns.com",
-      "image": "creative_designs.png",
+      "image": "google.jpeg",
       "membershipLevel": 3,
       "description": "Design studio specializing in branding and digital art."
     },
@@ -40,7 +41,7 @@
       "address": "654 Wellness Street, Health City",
       "phone": "+1 333-444-5555",
       "website": "https://www.healthfirst.com",
-      "image": "health_first.png",
+      "image": "google.jpeg",
       "membershipLevel": 2,
       "description": "Healthcare provider with a focus on preventive care."
     },
@@ -49,7 +50,7 @@
       "address": "987 Gourmet Avenue, Food City",
       "phone": "+1 222-333-4444",
       "website": "https://www.foodiesparadise.com",
-      "image": "foodies_paradise.png",
+      "image": "apple.jpeg",
       "membershipLevel": 1,
       "description": "Specialty restaurant serving organic and locally sourced food."
     },
@@ -58,7 +59,7 @@
       "address": "456 Vacation Road, Adventure City",
       "phone": "+1 111-222-3333",
       "website": "https://www.travelexperts.com",
-      "image": "travel_experts.png",
+      "image": "tree.jpeg",
       "membershipLevel": 3,
       "description": "Travel agency providing luxury and budget travel packages."
     }

@@ -10,9 +10,12 @@
     
     <meta name="theme-color" content="#023047">
     <!-- Corrected paths for CSS -->
-    <link rel="stylesheet" href="../css/normalize.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+
+   
+    <title>Chamber of Commerce Directory page</title>
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
+
 <body>
 
     <header>
@@ -25,8 +28,8 @@
         <nav class="primary-nav">
             <ul class="nav-list">
                 <!-- Corrected paths for navigation links -->
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber/directory.html">Directory</a></li>
                 <li><a href="https://github.com/Kongsambathrorth">Github</a></li>
                 <li><a href="https://www.linkedin.com/in/sambathrorth/">Linkedin</a></li>
             </ul>
@@ -62,12 +65,22 @@
         </div>
       
         <section class="business-section">
-            <h2>Business Directory</h2>
             <div class="view-toggle">
-                <button id="grid-view" class="btn">Grid View</button>
-                <button id="list-view" class="btn">List View</button>
+                <button data-view="grid">Grid View</button>
+                <button data-view="list">List View</button>
             </div>
-            <div id="business-cards" class="grid-view"></div>
+            
+            <div id="business-cards" class="grid-view">
+                <div class="business-card">
+                    <img src="image1.jpg" alt="Business 1">
+                    <p>Business 1</p>
+                </div>
+                <div class="business-card">
+                    <img src="image2.jpg" alt="Business 2">
+                    <p>Business 2</p>
+                </div>
+                <!-- Add more business cards as needed -->
+            </div>
         </section>
 
     </main>
@@ -78,8 +91,9 @@
     </footer>
 
     <!-- Corrected path for the JavaScript file -->
-    <script src="../js/directory.js"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="../scripts/script.js"></script> 
+    <script src="../scripts/directory.js"></script>
+    <script src="../scripts/fetchWeather.js"></script> 
     
 
 </body>

@@ -351,22 +351,20 @@ footer p {
   box-sizing: border-box; /* Include padding in width calculations */
 }
 
-.grid-item-large-directory {
- 
+
+.grid-item-directory {
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: var(--soft-shadow); /* Optional: Add shadow for better visibility */
+  box-shadow: var(--soft-shadow);
   text-align: center;
-  grid-column: span 1; /* Default behavior */
+}
+
+.grid-item-large-directory {
+  grid-column: span 1;
 }
 
 .grid-item-small-directory {
- 
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: var(--soft-shadow); /* Optional: Add shadow for better visibility */
-  text-align: center;
-  grid-column: span 1; /* Default behavior */
+  grid-column: span 1;
 }
 
 /* Business Section */
