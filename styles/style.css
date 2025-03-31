@@ -139,16 +139,16 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: auto;
+
   gap: 8rem;
   align-items: center;
 }
 
 .footer-content, .footer-content2 {
-  margin-bottom: 13px;
+  margin-bottom: 0;
   font-size: small;
   text-align: left;
-  padding: 40px;
+  padding: 0px;
   
 }
 
