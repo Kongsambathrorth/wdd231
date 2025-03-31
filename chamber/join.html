@@ -37,12 +37,43 @@
     
     <!-- Main content starts -->
     <main class="grid-container">
-        <div class="grid-container-drectory">
-            <!-- Element 1: Larger -->
-            <div class="grid-item-large-directory">
-                <h5>Join page</h5>
-             
-            </div>
+        <h3>Please fill out the form below. We will review your application and get back to you as soon as possible. </h3>
+       
+        <form method="get" action="../chamber/Thankyou.html">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+          
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+          
+            <label for="organization-title">Organization Title</label>
+            <input type="text" id="organization-title" name="organization-title" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" placeholder="e.g., Project Manager">
+          
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" required placeholder="example@domain.com">
+          
+            <label for="phone">Mobile Phone Number</label>
+            <input type="tel" id="phone" name="phone" title="Enter your mobile number" autocomplete="tel" required>
+          
+            <label for="organization">Organization Name</label>
+            <input type="text" id="organization" name="organization" title="Enter your organization's name" autocomplete="organization" required>
+          
+            <label for="membership-level">Membership Level</label>
+            <select id="membership-level" name="membership-level" title="Select your membership level">
+              <option value="NP">Non-Profit</option>
+              <option value="Bronze">Bronze</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+            </select>
+          
+            <label for="description">Business Description</label>
+            <textarea id="description" name="description" title="Enter a description of your business"></textarea>
+          
+            <input type="hidden" id="timestamp" name="timestamp" value="">
+          
+            <button type="submit">Submit Application</button>
+          </form>
+          
         
       
 
