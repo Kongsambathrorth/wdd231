@@ -61,6 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 // Fetch members when the page loads
 fetchMembers();
