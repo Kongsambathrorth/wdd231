@@ -1,15 +1,6 @@
 [
     
     {
-      "name": "Tech Innovators",
-      "address": "123 Silicon Avenue, Tech City",
-      "phone": "+1 123-456-7890",
-      "website": "https://www.rifacademy.org",
-      "image": "sambathrorth.png",
-      "membershipLevel": 3,
-      "description": "Leading tech company focused on AI and machine learning."
-    },
-    {
       "name": "Eco Builders",
       "address": "456 Green Lane, Eco Town",
       "phone": "+1 987-654-3210",
