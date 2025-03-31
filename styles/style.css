@@ -31,12 +31,11 @@ body {
 header {
   background: var(--accent);
   color: white;
-  text-align: center;
-  display: flex;
+  display: flex; /* Ensure flexbox is used */
   align-items: center; /* Vertically center items */
-  justify-content: center; /* Horizontally center items */
-  gap: 1rem; /* Adjusted gap */
-  padding: 1rem; /* Added padding for better spacing */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .logo-profile {
