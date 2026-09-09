@@ -77,7 +77,7 @@ function displayCourses(filteredCourses) {
         const item = document.createElement('div');
         
         // Use custom non-framework class names
-        item.classList.add('course-box');
+        item.classList.add('course-item');
         if (course.completed) {
             item.classList.add('completed-course');
         }
