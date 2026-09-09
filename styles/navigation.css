@@ -1,0 +1,78 @@
+/* Navigation & Header Base (Mobile) */
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color, #023047);
+    color: white;
+}
+
+.logo-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-title {
+    font-size: 1.5rem;
+}
+
+.primary-nav {
+    background-color: #011627;
+}
+
+.nav-list {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    list-style: none;
+    background-color: #011627;
+}
+
+.nav-list.open {
+    display: flex;
+}
+
+.nav-list li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list li a:hover {
+    background-color: var(--secondary-color, #219ebc);
+}
+
+#hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0.5rem;
+}
+
+/* Navigation Desktop Overrides */
+@media screen and (min-width: 768px) {
+    #hamburger-btn {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-list li {
+        flex: 1;
+    }
+
+    .nav-list li a {
+        border-bottom: none;
+    }
+}

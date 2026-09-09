@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Custom meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 Course Home Page by Sambathrorth featuring coursework, web development projects, and certificate progress.">
+    <meta name="author" content="Sambathrorth">
+    <meta name="theme-color" content="#023047">
+  
+    <!-- Google Fonts Preconnect Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700" rel="stylesheet">
+
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
+
+    <title>Chamber of Commerce Home Page</title>
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+<header>
+    <img class="logo-profile" src="images/profile.jpg" alt="Logo">
+    <span class="header-title">Sambathrorth</span>
+    
+    <!-- Hamburger Button -->
+    <button id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
+</header>
+
+<div>
+    <nav class="primary-nav">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Directory</a></li>
+            <li><a href="https://github.com/Kongsambathrorth">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/sambathrorth/">Linkedin</a></li>
+        </ul>
+    </nav>
+</div>
+    
+<!-- Main content starts -->
+<main class="main-content">
+    <h1>Chamber of Commerce Home Page</h1>
+
+    <!-- Wrapper div for side-by-side desktop layout -->
+    <div class="layout-wrapper">
+        <!-- Section 1: Course Work -->
+        <section class="grid-item-large">
+            <h2>Course Work</h2>
+            <ul>
+                <li>CSE 110: Introduction to Programming</li>
+                <li>WDD 130: Web Fundamentals</li>
+                <li>CSE 111: Programming with Functions</li>
+                <li>CSE 210: Programming with Classes</li>
+                <li>WDD 131: Dynamic Web Fundamentals</li>
+                <li>WDD 231: Frontend Web Development I</li>
+            </ul>
+        </section>
+
+        <!-- Section 2: Phnom Penh -->
+        <section class="grid-item-small">
+            <h2>Phnom Penh, Cambodia</h2>
+            <img class="img-location" src="images/royalpalace.jpg" alt="Royal Palace in Phnom Penh">
+        </section>
+    </div>
+
+    <!-- Section 3: Web Certificate -->
+    <section class="separate-section">
+        <h2>Web and Computer Programming Certificate</h2>
+        
+        <div class="button-group">
+            <button id="btn-all" class="filter-button">All</button>
+            <button id="btn-cse" class="filter-button">CSE</button>
+            <button id="btn-wdd" class="filter-button">WDD</button>
+        </div>
+
+        <div class="course-card-list"></div>
+        <p id="total-credits"></p>
+    </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 🌺 Sambathrorth 🌺 Kandal Province</p>
+  <p>Last Update: <span id="last-update"></span></p>
+</footer>
+</body>
+</html>
