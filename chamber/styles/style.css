@@ -1,0 +1,280 @@
+/* Variables */
+:root {
+  --primary: #0d0d0e;
+  --secondary: #FFB703;
+  --accent: #023047;
+  --accent2: #FB8500;
+  --black: #020E12;
+  --lightGray: #e4e4e4;
+  --white: #FFFFFF;
+  --soft-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+  --font: 'Urbanist', sans-serif;
+}
+
+/* General Reset */
+* {
+  box-sizing: border-box;
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  background-color: var(--lightGray);
+  color: var(--accent);
+}
+
+
+.logo-profile {
+  width: 50px;
+  border-radius: 5%;
+  background-color: transparent;
+}
+
+.header-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation Bar - Flexbox Implementation */
+.primary-nav {
+  background-color: var(--primary);
+  text-align: center;
+  box-shadow: var(--soft-shadow);
+}
+
+
+.nav-list a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--white);
+  transition: color 200ms ease-in-out;
+  padding: 0.5rem 1rem;
+}
+
+.nav-list a:hover {
+  color: var(--accent2);
+}
+
+/* Main Content */
+main {
+  padding: 1rem;
+  background: var(--white);
+  margin: 1rem auto;
+  box-shadow: var(--soft-shadow);
+  border-radius: 5px;
+  max-width: 1200px;
+}
+
+h3,
+h5 {
+  font-size: 1.4rem;
+  color: whitesmoke;
+  background-color: var(--accent);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+
+.footer-content,
+.footer-content2 {
+  font-size: small;
+  text-align: left;
+}
+
+.footer-icons a img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.footer-icons a img:hover {
+  transform: scale(1.2);
+}
+
+/* Directory Layout Views */
+
+/* 1. Default/Grid View (using CSS Grid) */
+#business-cards.grid,
+#business-cards.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 1rem;
+}
+
+/* 2. List View (using Flexbox) */
+#business-cards.list,
+#business-cards.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 1rem;
+}
+
+/* Business Card - Flexbox Internal Layout */
+.business-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--lightGray);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+  text-align: center;
+}
+
+/* Card layout specifically when in List View */
+#business-cards.list .business-card,
+#business-cards.list-view .business-card {
+  flex-direction: row;
+  text-align: left;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.business-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#business-cards.list .business-card img,
+#business-cards.list-view .business-card img {
+  width: 100px;
+}
+
+/* Form Styles */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Utility/Misc */
+.thankyou-section {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn:hover {
+  background-color: var(--accent2);
+}
+
+/* Hero Section */
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  #business-cards.list .business-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* style.css */
+
+/* Use Flexbox for the Header to align Logo and Title */
+header {
+  background: var(--accent);
+  color: white;
+  display: flex;
+  /* REQUIRED FLEX */
+  align-items: center;
+  /* Vertically center logo and text */
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Use Flexbox for Navigation Links */
+.nav-list {
+  list-style: none;
+  display: flex;
+  /* REQUIRED FLEX */
+  justify-content: center;
+  /* Center links horizontally */
+  flex-wrap: wrap;
+  /* Allow wrapping on mobile */
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Use Flexbox for Footer layout */
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  /* REQUIRED FLEX */
+  flex-direction: column;
+  /* Stack info vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
