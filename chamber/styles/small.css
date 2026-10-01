@@ -10,7 +10,6 @@
     --text-light: #ffffff;
     --border-color: #dddddd;
     
-    /* Completed Course State */
     --card-completed-bg: #d4edda;
     --card-completed-border: #c3e6cb;
     --card-completed-text: #155724;
@@ -18,12 +17,6 @@
     
     --shadow-light: rgba(0, 0, 0, 0.1);
     --font-family: 'Roboto', sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {

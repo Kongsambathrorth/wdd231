@@ -21,12 +21,22 @@
 
 /* Body Styling */
 body {
-  font-size: 1.8rem;
+  font-size: 1rem;
   line-height: 1.6;
   background-color: var(--lightGray);
   color: var(--accent);
 }
 
+/* Header Styling */
+header {
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
 
 .logo-profile {
   width: 50px;
@@ -40,17 +50,25 @@ body {
   color: white;
 }
 
-/* Navigation Bar - Flexbox Implementation */
+/* Navigation Bar */
 .primary-nav {
   background-color: var(--primary);
   text-align: center;
   box-shadow: var(--soft-shadow);
 }
 
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+}
 
 .nav-list a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--white);
   transition: color 200ms ease-in-out;
@@ -80,26 +98,7 @@ h5 {
   padding: 0.5rem;
 }
 
-
-.footer-content,
-.footer-content2 {
-  font-size: small;
-  text-align: left;
-}
-
-.footer-icons a img {
-  width: 40px;
-  height: auto;
-  transition: transform 0.3s;
-}
-
-.footer-icons a img:hover {
-  transform: scale(1.2);
-}
-
 /* Directory Layout Views */
-
-/* 1. Default/Grid View (using CSS Grid) */
 #business-cards.grid,
 #business-cards.grid-view {
   display: grid;
@@ -108,7 +107,6 @@ h5 {
   padding: 1rem;
 }
 
-/* 2. List View (using Flexbox) */
 #business-cards.list,
 #business-cards.list-view {
   display: flex;
@@ -117,7 +115,6 @@ h5 {
   padding: 1rem;
 }
 
-/* Business Card - Flexbox Internal Layout */
 .business-card {
   display: flex;
   flex-direction: column;
@@ -130,7 +127,6 @@ h5 {
   text-align: center;
 }
 
-/* Card layout specifically when in List View */
 #business-cards.list .business-card,
 #business-cards.list-view .business-card {
   flex-direction: row;
@@ -198,25 +194,6 @@ form button:hover {
   text-align: center;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  color: var(--white);
-}
-
-.btn:hover {
-  background-color: var(--accent2);
-}
-
-/* Hero Section */
 .hero-image {
   width: 100%;
   height: auto;
@@ -224,57 +201,38 @@ form button:hover {
   display: block;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  body {
-    font-size: 1.4rem;
-  }
-
-  #business-cards.list .business-card {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-
-/* style.css */
-
-/* Use Flexbox for the Header to align Logo and Title */
-header {
-  background: var(--accent);
-  color: white;
-  display: flex;
-  /* REQUIRED FLEX */
-  align-items: center;
-  /* Vertically center logo and text */
-  justify-content: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-/* Use Flexbox for Navigation Links */
-.nav-list {
-  list-style: none;
-  display: flex;
-  /* REQUIRED FLEX */
-  justify-content: center;
-  /* Center links horizontally */
-  flex-wrap: wrap;
-  /* Allow wrapping on mobile */
-  gap: 1.5rem;
-  padding: 1rem;
-}
-
-/* Use Flexbox for Footer layout */
+/* Footer Styling */
 footer {
   background-color: #333;
   color: #fff;
   display: flex;
-  /* REQUIRED FLEX */
   flex-direction: column;
-  /* Stack info vertically */
   align-items: center;
   justify-content: center;
   gap: 1rem;
   padding: 1.5rem;
+}
+
+.footer-content,
+.footer-content2 {
+  font-size: small;
+  text-align: left;
+}
+
+.footer-icons a img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.footer-icons a img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #business-cards.list .business-card {
+    flex-direction: column;
+    text-align: center;
+  }
 }

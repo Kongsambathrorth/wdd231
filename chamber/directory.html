@@ -2,59 +2,48 @@
 <html lang="en">
 
 <head>
-    <!-- Custom meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a directory page.">
-    <meta name="author" content="directory page">
-
+    <meta name="description" content="Explore the official business directory of the Cambodian Chamber of Commerce.">
+    <meta name="author" content="Sambathrorth Kong">
     <meta name="theme-color" content="#023047">
-    <!-- Corrected paths for CSS -->
 
-
-    <title>Chamber of Commerce Directory page</title>
+    <title>Directory - Cambodian Chamber of Commerce</title>
+    <link rel="stylesheet" href="/chamber/styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/chamber/styles/style.css">
     <link rel="stylesheet" href="/chamber/styles/navigation.css">
     <link rel="stylesheet" href="/chamber/styles/small.css">
     <link rel="stylesheet" href="/chamber/styles/medium.css">
     <link rel="stylesheet" href="/chamber/styles/large.css">
-    <link rel="stylesheet" href="/chamber/styles/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 
 <body>
     <header>
-        <!-- Corrected path for the logo image -->
         <img class="logo-profile" src="/chamber/images/logo.png" alt="Logo">
         <h1 class="header-title">Cambodian Chamber</h1>
     </header>
- <div>
+
+    <div>
         <nav class="primary-nav">
             <ul class="nav-list">
-                <!-- Corrected paths for navigation link -->
                 <li><a href="/chamber/index.html">Home</a></li>
                 <li><a href="/chamber/directory.html">Directory</a></li>
                 <li><a href="/chamber/join.html">Join</a></li>
                 <li><a href="/chamber/discover.html">Discover</a></li>
             </ul>
         </nav>
-</div>
+    </div>
+
     <main>
-
-
+        <h1>Chamber Business Directory</h1>
         <section class="business-section">
-            <div id="business-cards" class="grid">
-            </div>
             <div class="menu">
                 <button id="grid">Grid View</button>
                 <button id="list">List View</button>
             </div>
-
-<section class="business-section">
-    <div id="business-cards" class="grid">
-        </div>
-</section>
+            <div id="business-cards" class="grid"></div>
         </section>
     </main>
 
@@ -63,13 +52,11 @@
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 
-    <!-- Corrected path for the JavaScript file -->
-    <script src="/chamber/scripts/date.js"></script> 
+    <script src="/chamber/scripts/date.js"></script>
     <script src="/chamber/scripts/directory.js"></script>
-    <script src="/chamber/scripts/fetchWeather.js"></script> 
-    <script src="/chamber/scripts/navigation.js"></script> 
-    <script src="/chamber/scripts/script.js"></script> 
-    
+    <script src="/chamber/scripts/fetchweather.js"></script>
+    <script src="/chamber/scripts/navigation.js"></script>
+    <script src="/chamber/scripts/script.js"></script>
 </body>
 
 </html>

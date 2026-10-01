@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Custom meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a directory page.">
-    <meta name="author" content="directory page">
-
+    <meta name="description" content="Apply for membership with the Cambodian Chamber of Commerce and grow your business network.">
+    <meta name="author" content="Sambathrorth Kong">
     <meta name="theme-color" content="#023047">
-    <!-- Corrected paths for CSS -->
 
-
-    <title>Chamber of Commerce Directory page</title>
+    <title>Join - Cambodian Chamber of Commerce</title>
+    <link rel="stylesheet" href="/chamber/styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/chamber/styles/style.css">
     <link rel="stylesheet" href="/chamber/styles/navigation.css">
     <link rel="stylesheet" href="/chamber/styles/small.css">
     <link rel="stylesheet" href="/chamber/styles/medium.css">
     <link rel="stylesheet" href="/chamber/styles/large.css">
-    <link rel="stylesheet" href="/chamber/styles/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 <body>
 
     <header>
-        <!-- Corrected path for the logo image -->
         <img class="logo-profile" src="/chamber/images/logo.png" alt="Logo">
         <h1 class="header-title">Cambodian Chamber</h1>
     </header>
     <div>
         <nav class="primary-nav">
             <ul class="nav-list">
-                <!-- Corrected paths for navigation link -->
                 <li><a href="/chamber/index.html">Home</a></li>
                 <li><a href="/chamber/directory.html">Directory</a></li>
                 <li><a href="/chamber/join.html">Join</a></li>
@@ -40,11 +34,11 @@
         </nav>
     </div>
     
-    <!-- Main content starts -->
     <main class="grid-container">
-        <h3>Please fill out the form below. We will review your application and get back to you as soon as possible. </h3>
+        <h1>Chamber Membership Application</h1>
+        <p>Please fill out the form below. We will review your application and get back to you as soon as possible.</p>
        
-        <form method="get" action="../chamber/Thankyou.html">
+        <form method="get" action="/chamber/Thankyou.html">
             <label for="first-name">First Name</label>
             <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
           
@@ -77,11 +71,7 @@
             <input type="hidden" id="timestamp" name="timestamp" value="">
           
             <button type="submit">Submit Application</button>
-          </form>
-          
-        
-      
-
+        </form>
     </main>
 
     <footer>
@@ -89,15 +79,10 @@
         <p>Last Update: <span id="last-update"></span></p>
     </footer>
 
-     <!-- Corrected path for the JavaScript file -->
-    <script src="/chamber/scripts/date.js"></script> 
+    <script src="/chamber/scripts/date.js"></script>
     <script src="/chamber/scripts/directory.js"></script>
-    <script src="/chamber/scripts/fetchWeather.js"></script> 
-    <script src="/chamber/scripts/navigation.js"></script> 
-    <script src="/chamber/scripts/script.js"></script> 
-    
-
-    
-
+    <script src="/chamber/scripts/fetchweather.js"></script>
+    <script src="/chamber/scripts/navigation.js"></script>
+    <script src="/chamber/scripts/script.js"></script>
 </body>
 </html>
