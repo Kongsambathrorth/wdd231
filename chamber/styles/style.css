@@ -4,6 +4,7 @@
 :root {
   --primary: #0d0d0e;
   --primary-color: #023047;
+  --primary-dark: #011627;
   --secondary: #FFB703;
   --secondary-color: #219ebc;
   --accent: #023047;
@@ -20,8 +21,10 @@
   --footer-bg: #333333;
   --soft-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4);
   --form-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.1);
   --font-main: 'Urbanist', sans-serif;
   --card-completed-bg: #d4edda;
+  --card-completed-border: #c3e6cb;
   --card-completed-text: #155724;
   --card-incomplete-bg: #FFFFFF;
 }
@@ -58,7 +61,9 @@ header {
 
 .logo-profile {
   width: 50px;
+  height: 50px;
   border-radius: 50%;
+  object-fit: cover;
   background-color: transparent;
 }
 
@@ -70,38 +75,57 @@ header {
 
 .primary-nav,
 .main-navigation {
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
   text-align: center;
   box-shadow: var(--soft-shadow);
 }
 
 .nav-list {
+  display: none; /* Hidden by default on mobile */
+  flex-direction: column;
   list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 1rem;
+  background-color: var(--primary-dark);
+  gap: 0;
+  padding: 0;
 }
 
-.nav-list a {
+.nav-list.open {
+  display: flex;
+}
+
+.nav-list a,
+.nav-list li a {
+  display: block;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--white);
-  transition: color 200ms ease-in-out;
-  padding: 0.5rem 1rem;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-list a:hover,
 .nav-list li a:hover {
   color: var(--accent2);
+  background-color: var(--secondary-color);
+}
+
+#hamburger-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0.5rem;
 }
 
 /* ==========================================
    4. MAIN CONTENT & SECTIONS
    ========================================== */
 main,
+main.main-content,
 .grid-container {
   padding: 1rem;
   background: var(--white);
@@ -109,6 +133,13 @@ main,
   box-shadow: var(--soft-shadow);
   border-radius: 5px;
   max-width: 1200px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 h3,
@@ -131,27 +162,72 @@ h5 {
 .location-section,
 .separate-section {
   background-color: var(--white);
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-light);
 }
 
-.course-item {
-  background-color: var(--card-incomplete-bg);
+.course-section {
+  width: 100%;
 }
 
-.course-item.completed-course {
-  background-color: var(--card-completed-bg);
-  color: var(--card-completed-text);
+.location-section {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.img-location {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+/* Button & Card Controls */
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
 }
 
 .filter-button {
   background-color: var(--primary-color);
   color: var(--white);
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
 }
 
 .filter-button:hover {
   background-color: var(--secondary-color);
+}
+
+.course-card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.course-item {
+  background-color: var(--card-incomplete-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.course-item.completed-course {
+  background-color: var(--card-completed-bg);
+  border-color: var(--card-completed-border);
+  color: var(--card-completed-text);
 }
 
 /* ==========================================
@@ -260,6 +336,13 @@ footer {
   justify-content: center;
   gap: 1rem;
   padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
 }
 
 .footer-content,
@@ -279,9 +362,47 @@ footer {
 }
 
 /* ==========================================
-   8. RESPONSIVE DESIGN
+   8. RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================== */
-@media (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  #hamburger-btn {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav-list li {
+    flex: 1;
+  }
+
+  .nav-list a,
+  .nav-list li a {
+    border-bottom: none;
+  }
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .location-section {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .course-card-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   #business-cards.list .business-card,
   #business-cards.list-view .business-card {
     flex-direction: column;
