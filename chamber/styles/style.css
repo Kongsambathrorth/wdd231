@@ -1,10 +1,94 @@
 /* ==========================================
-   DISCOVER PAGE & GRID TEMPLATE AREAS
+   1. CSS VARIABLES & THEME TOKENS
+   ========================================== */
+:root {
+  --primary: #0d0d0e;
+  --primary-color: #023047;
+  --primary-dark: #011627;
+  --secondary-color: #219ebc;
+  --accent: #023047;
+  --accent2: #FB8500;
+  --light-gray: #e4e4e4;
+  --white: #FFFFFF;
+  --border-color: #ccc;
+  --soft-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+  --font-main: 'Urbanist', sans-serif;
+}
+
+/* ==========================================
+   2. GLOBAL RESET & BASE STYLES
+   ========================================== */
+* {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--light-gray);
+  color: var(--accent);
+}
+
+/* Header & Navigation */
+header {
+  background: var(--accent);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.logo-profile {
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.primary-nav {
+  background-color: var(--primary-dark);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--accent2);
+}
+
+/* ==========================================
+   3. DISCOVER PAGE & GRID AREAS
    ========================================== */
 .discover-main {
   max-width: 1200px;
   margin: 1rem auto;
   padding: 1rem;
+  background-color: var(--white);
+  border-radius: 8px;
 }
 
 .visit-message-box {
@@ -15,62 +99,38 @@
   border-radius: 6px;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  box-shadow: var(--soft-shadow);
 }
 
-.discover-main h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--accent);
-}
-
-/* Base Card Styling */
 .discover-card {
-  background-color: var(--white);
+  background-color: var(--light-gray);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: var(--soft-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.discover-card h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
 .discover-card figure {
-  margin: 0.5rem 0;
-  overflow: hidden;
-  border-radius: 6px;
   width: 100%;
   max-width: 300px;
+  margin: 0.5rem 0;
 }
 
 .discover-card img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
+  max-width: 300px;
+  height: 200px;
   object-fit: cover;
-  display: block;
+  border-radius: 6px;
 }
 
 .discover-card address {
   font-style: normal;
   font-size: 0.85rem;
-  color: #555;
-  margin-bottom: 0.5rem;
   font-weight: bold;
-}
-
-.discover-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  flex-grow: 1;
+  margin-bottom: 0.5rem;
 }
 
 .learn-more-btn {
@@ -80,17 +140,10 @@
   padding: 0.5rem 1.2rem;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  margin-top: auto;
 }
 
-.learn-more-btn:hover {
-  background-color: var(--accent2);
-}
-
-/* ------------------------------------------
-   GRID AREAS: SMALL SCREENS (320px to 640px)
-   ------------------------------------------ */
+/* Small Screens (320px - 640px) */
 .discover-grid {
   display: grid;
   gap: 1.2rem;
@@ -106,9 +159,7 @@
     "card8";
 }
 
-/* ------------------------------------------
-   GRID AREAS: MEDIUM SCREENS (641px to 1024px)
-   ------------------------------------------ */
+/* Medium Screens (641px - 1024px) */
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   .discover-grid {
     grid-template-columns: 1fr 1fr;
@@ -120,25 +171,31 @@
   }
 }
 
-/* ------------------------------------------
-   GRID AREAS & HOVER EFFECTS: LARGE SCREENS (1025px and above)
-   ------------------------------------------ */
+/* Large Screens (1025px and above) */
 @media screen and (min-width: 1025px) {
   .discover-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "card1 card1 card2 card3"
-      "card4 card5 card5 card3"
-      "card4 card6 card7 card8";
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 .";
   }
 
-  /* Desktop Image Hover Effect */
   .discover-card img {
-    transition: transform 0.4s ease, filter 0.4s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
 
   .discover-card img:hover {
     transform: scale(1.05);
-    filter: brightness(1.1) contrast(1.05);
+    filter: brightness(1.1);
   }
+}
+
+/* Footer */
+footer {
+  background-color: #333333;
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
 }

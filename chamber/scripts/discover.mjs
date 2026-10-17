@@ -1,3 +1,5 @@
+import { itemsOfInterest } from "./data/discover.mjs";
+
 export const itemsOfInterest = [
   {
     title: "Angkor Wat",
