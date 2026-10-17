@@ -1,36 +1,47 @@
-/* Variables */
+/* ==========================================
+   1. CSS VARIABLES & THEME TOKENS
+   ========================================== */
 :root {
   --primary: #0d0d0e;
   --secondary: #FFB703;
   --accent: #023047;
   --accent2: #FB8500;
   --black: #020E12;
-  --lightGray: #e4e4e4;
+  --light-gray: #e4e4e4;
   --white: #FFFFFF;
+  --form-bg: #f9f9f9;
+  --border-color: #ccc;
+  --btn-primary: #007bff;
+  --btn-hover: #0056b3;
+  --footer-bg: #333333;
   --soft-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4);
-  --font: 'Urbanist', sans-serif;
+  --form-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --font-main: 'Urbanist', sans-serif;
 }
 
-/* General Reset */
+/* ==========================================
+   2. GLOBAL RESET & BASE STYLES
+   ========================================== */
 * {
   box-sizing: border-box;
-  font-family: var(--font);
+  font-family: var(--font-main);
   margin: 0;
   padding: 0;
 }
 
-/* Body Styling */
 body {
   font-size: 1rem;
   line-height: 1.6;
-  background-color: var(--lightGray);
+  background-color: var(--light-gray);
   color: var(--accent);
 }
 
-/* Header Styling */
+/* ==========================================
+   3. HEADER & NAVIGATION STYLING
+   ========================================== */
 header {
   background: var(--accent);
-  color: white;
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -47,10 +58,9 @@ header {
 .header-title {
   font-size: 1.4rem;
   font-weight: bold;
-  color: white;
+  color: var(--white);
 }
 
-/* Navigation Bar */
 .primary-nav {
   background-color: var(--primary);
   text-align: center;
@@ -79,7 +89,9 @@ header {
   color: var(--accent2);
 }
 
-/* Main Content */
+/* ==========================================
+   4. MAIN CONTENT & HEADINGS
+   ========================================== */
 main {
   padding: 1rem;
   background: var(--white);
@@ -92,13 +104,22 @@ main {
 h3,
 h5 {
   font-size: 1.4rem;
-  color: whitesmoke;
+  color: var(--white);
   background-color: var(--accent);
   text-align: center;
   padding: 0.5rem;
 }
 
-/* Directory Layout Views */
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================
+   5. DIRECTORY LAYOUT VIEWS (GRID & LIST)
+   ========================================== */
 #business-cards.grid,
 #business-cards.grid-view {
   display: grid;
@@ -120,7 +141,7 @@ h5 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--lightGray);
+  background-color: var(--light-gray);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: var(--soft-shadow);
@@ -146,14 +167,16 @@ h5 {
   width: 100px;
 }
 
-/* Form Styles */
+/* ==========================================
+   6. FORM STYLES
+   ========================================== */
 form {
   max-width: 600px;
   margin: 2rem auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: var(--form-bg);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--form-shadow);
 }
 
 form label {
@@ -168,14 +191,14 @@ form select {
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
 }
 
 form button {
   width: 100%;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--btn-primary);
+  color: var(--white);
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -185,22 +208,15 @@ form button {
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: var(--btn-hover);
 }
 
-
-
-.hero-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-/* Footer Styling */
+/* ==========================================
+   7. FOOTER STYLING
+   ========================================== */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--footer-bg);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -225,12 +241,13 @@ footer {
   transform: scale(1.2);
 }
 
-/* Responsive Design */
+/* ==========================================
+   8. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
 @media (max-width: 768px) {
-  #business-cards.list .business-card {
+  #business-cards.list .business-card,
+  #business-cards.list-view .business-card {
     flex-direction: column;
     text-align: center;
   }
 }
-
-
