@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features & Pricing - Lumina Learning</title>
+  <meta name="description" content="Explore Lumina Learning features for teachers and students, and calculate your institutional subscription costs.">
+  <meta name="author" content="Sambathrorth Kong">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+  
+  <!-- Scripts -->
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/calculator.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="images/luminia_logo.jfif" alt="Lumina Learning Logo" class="logo-image" width="40" height="40">
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html" class="active">Features</a></li>
+        <li><a href="resources.html">Resources</a></li>
+              </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Platform Features & Transparent Pricing</h1>
+      <p>Discover how Lumina adapts to both educators and learners, then calculate your custom plan.</p>
+    </section>
+
+    <!-- Role Toggle Feature Section -->
+    <section class="feature-toggle-section">
+      <div class="toggle-buttons">
+        <button class="btn btn-primary role-btn active" data-role="teachers">For Teachers</button>
+        <button class="btn btn-secondary role-btn" data-role="students">For Students</button>
+      </div>
+
+      <div class="feature-display-card">
+        <div id="teacher-content" class="role-content active">
+          <h3>Empower Your Classroom Management</h3>
+          <p>Streamline grading, automate attendance tracking, and deploy interactive lesson blocks with our intuitive drag-and-drop course builder.</p>
+          <ul>
+            <li>✔ Advanced analytics and student performance tracking</li>
+            <li>✔ Rubric-based automated assessment tools</li>
+            <li>✔ Seamless gradebook synchronization</li>
+          </ul>
+        </div>
+        <div id="student-content" class="role-content" style="display: none;">
+          <h3>Engage in Immersive Learning</h3>
+          <p>Access bite-sized multimedia modules, real-time collaboration whiteboards, and personal progress trackers anytime, anywhere.</p>
+          <ul>
+            <li>✔ Mobile-optimized responsive lesson viewing</li>
+            <li>✔ Interactive discussion boards and peer review</li>
+            <li>✔ Gamified badges and achievement milestones</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Calculator Section -->
+    <section class="calculator-section">
+      <h2>Interactive Pricing Calculator</h2>
+      <p>Estimate your monthly institutional cost based on active user counts.</p>
+      
+      <div class="calculator-card">
+        <div class="input-group">
+          <label for="user-slider">Select Number of Users: <span id="user-count-display">50</span></label>
+          <input type="range" id="user-slider" min="10" max="500" step="10" value="50">
+        </div>
+        
+        <div class="pricing-output">
+          <div class="tier-info">
+            <span>Selected Tier: <strong id="tier-name">Standard Tier</strong></span>
+          </div>
+          <div class="total-cost">
+            <span>Estimated Monthly Total:</span>
+            <h3 id="total-price">$250/mo</h3>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="save-plan-btn">Save Plan Preferences</button>
+        <p id="save-status" class="status-msg"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Lumina Learning. All rights reserved.</p>
+        <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

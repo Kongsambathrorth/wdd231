@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource Library & Contact - Lumina Learning</title>
+  <meta name="description" content="Browse educational articles, instructional design resources, and contact Lumina Learning for a product demo.">
+  <meta name="author" content="Sambathrorth Kong">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+  
+  <!-- Scripts -->
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/resources.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="images/luminia_logo.jfif" alt="Lumina Learning Logo" class="logo-image" width="40" height="40">
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="resources.html" class="active">Resources</a></li>
+           </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Educational Resource Library</h1>
+      <p>Explore articles, guides, and best practices for modern digital learning systems.</p>
+    </section>
+
+    <!-- Category Filter Buttons -->
+    <section class="filter-section">
+      <div class="filter-buttons">
+        <button class="btn btn-secondary filter-btn active" data-filter="all">All Resources</button>
+        <button class="btn btn-secondary filter-btn" data-filter="teachers">For Teachers</button>
+        <button class="btn btn-secondary filter-btn" data-filter="students">For Students</button>
+        <button class="btn btn-secondary filter-btn" data-filter="admin">Administration</button>
+      </div>
+    </section>
+
+    <!-- Dynamic Article Grid (Populated via JS Array Objects & Template Literals) -->
+    <section class="resources-grid-section">
+      <div id="resource-grid" class="resource-grid">
+        <!-- Rendered dynamically by scripts/resources.js -->
+      </div>
+    </section>
+
+    <!-- Contact & Demo Request Form -->
+    <section class="contact-section" id="contact">
+      <h2>Request a Product Demo</h2>
+      <p>Fill out the form below to schedule a personalized walkthrough with our education specialists.</p>
+      
+      <form id="demo-form" class="standard-form">
+        <fieldset>
+          <legend>Institution Details</legend>
+          
+          <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Institutional Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="role-select">Primary Role:</label>
+            <select id="role-select" name="role">
+              <option value="administrator">School Administrator</option>
+              <option value="teacher">Instructor / Teacher</option>
+              <option value="it">IT Specialist</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Project Scope / Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your student population..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Demo Request</button>
+          <p id="form-feedback" class="status-msg"></p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Lumina Learning. All rights reserved.</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
