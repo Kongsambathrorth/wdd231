@@ -3,12 +3,16 @@
    ========================================== */
 :root {
   --primary: #0d0d0e;
+  --primary-color: #023047;
   --secondary: #FFB703;
+  --secondary-color: #219ebc;
   --accent: #023047;
   --accent2: #FB8500;
   --black: #020E12;
   --light-gray: #e4e4e4;
   --white: #FFFFFF;
+  --bg-light: #f8f9fa;
+  --text-dark: #333333;
   --form-bg: #f9f9f9;
   --border-color: #ccc;
   --btn-primary: #007bff;
@@ -17,6 +21,9 @@
   --soft-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4);
   --form-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --font-main: 'Urbanist', sans-serif;
+  --card-completed-bg: #d4edda;
+  --card-completed-text: #155724;
+  --card-incomplete-bg: #FFFFFF;
 }
 
 /* ==========================================
@@ -51,17 +58,18 @@ header {
 
 .logo-profile {
   width: 50px;
-  border-radius: 5%;
+  border-radius: 50%;
   background-color: transparent;
 }
 
 .header-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--white);
 }
 
-.primary-nav {
+.primary-nav,
+.main-navigation {
   background-color: var(--primary);
   text-align: center;
   box-shadow: var(--soft-shadow);
@@ -85,14 +93,16 @@ header {
   padding: 0.5rem 1rem;
 }
 
-.nav-list a:hover {
+.nav-list a:hover,
+.nav-list li a:hover {
   color: var(--accent2);
 }
 
 /* ==========================================
-   4. MAIN CONTENT & HEADINGS
+   4. MAIN CONTENT & SECTIONS
    ========================================== */
-main {
+main,
+.grid-container {
   padding: 1rem;
   background: var(--white);
   margin: 1rem auto;
@@ -115,6 +125,33 @@ h5 {
   height: auto;
   object-fit: cover;
   display: block;
+}
+
+.course-section,
+.location-section,
+.separate-section {
+  background-color: var(--white);
+}
+
+.course-item {
+  background-color: var(--card-incomplete-bg);
+}
+
+.course-item.completed-course {
+  background-color: var(--card-completed-bg);
+  color: var(--card-completed-text);
+}
+
+.filter-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: var(--secondary-color);
 }
 
 /* ==========================================
@@ -222,7 +259,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
 }
 
 .footer-content,
@@ -242,7 +279,7 @@ footer {
 }
 
 /* ==========================================
-   8. RESPONSIVE DESIGN (MEDIA QUERIES)
+   8. RESPONSIVE DESIGN
    ========================================== */
 @media (max-width: 768px) {
   #business-cards.list .business-card,
