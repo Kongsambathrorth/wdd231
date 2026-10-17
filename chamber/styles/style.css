@@ -188,11 +188,7 @@ form button:hover {
   background-color: #0056b3;
 }
 
-/* Utility/Misc */
-.thankyou-section {
-  padding: 90px 0;
-  text-align: center;
-}
+
 
 .hero-image {
   width: 100%;
@@ -237,18 +233,4 @@ footer {
   }
 }
 
-form button {
-  width: 100%;
-  background-color: #011627; /* Updated to a darker shade for better contrast */
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s;
-}
 
-form button:hover {
-  background-color: #023047;
-}
