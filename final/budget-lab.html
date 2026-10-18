@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Lab | FinWise Academy</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-mark">Fin</span>Wise Academy
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Courses</a>
+        <a href="lesson.html">Active Lesson</a>
+        <a href="budget-lab.html" class="active">Budget Lab</a>
+        <a href="financial.html">Glossary</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="progress-pill">
+          <span class="pill-label">Progress:</span>
+          <span id="nav-overall-pct" class="pill-value">0%</span>
+        </div>
+        <button id="btn-open-cert" class="btn btn-outline-sm">Certificate</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Applied 50/30/20 Budget Lab (Vanilla Canvas) -->
+  <section id="interactive-lab" class="section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="tag-badge">Applied Interactive Lab</span>
+        <h2>50/30/20 Budget Allocation Tool</h2>
+        <p>No external libraries: pure native HTML5 Canvas and responsive inputs to test your numbers in real time.</p>
+      </div>
+
+      <div class="lab-card">
+        <div class="lab-controls">
+          <label for="input-income">Monthly Take-Home Income ($):</label>
+          <div class="input-row">
+            <input type="number" id="input-income" min="500" max="25000" step="100" value="4000">
+            <input type="range" id="range-income" min="500" max="25000" step="100" value="4000">
+          </div>
+
+          <div class="metric-tiles">
+            <div class="metric-tile tile-blue">
+              <span class="tile-title">50% Needs</span>
+              <strong id="val-needs">$2,000</strong>
+              <small>Housing, groceries, bills</small>
+            </div>
+            <div class="metric-tile tile-orange">
+              <span class="tile-title">30% Wants</span>
+              <strong id="val-wants">$1,200</strong>
+              <small>Dining out, subscriptions</small>
+            </div>
+            <div class="metric-tile tile-green">
+              <span class="tile-title">20% Savings</span>
+              <strong id="val-savings">$800</strong>
+              <small>Emergency cushion, investments</small>
+            </div>
+          </div>
+
+          <div class="lab-tips-box">
+            <h4>How to apply this split:</h4>
+            <ul>
+              <li><strong>Needs (<span id="tip-needs">$2,000</span>):</strong> Rent/mortgage, utilities, essential groceries, commute.</li>
+              <li><strong>Wants (<span id="tip-wants">$1,200</span>):</strong> Entertainment, social outings, retail, gym, streaming.</li>
+              <li><strong>Savings (<span id="tip-savings">$800</span>):</strong> $1,000 emergency fund buildout first, then index funds or retirement match.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lab-canvas-container">
+          <canvas id="budgetCanvas" width="280" height="280" role="img" aria-label="50 30 20 budget breakdown donut chart"></canvas>
+          <div class="canvas-legend">
+            <span><i class="dot dot-blue"></i> Needs (<span id="leg-needs">$2,000</span>)</span>
+            <span><i class="dot dot-orange"></i> Wants (<span id="leg-wants">$1,200</span>)</span>
+            <span><i class="dot dot-green"></i> Savings (<span id="leg-savings">$800</span>)</span>
+          </div>
+          <div class="lab-action-group">
+            <a href="lesson.html?course=0&lesson=0" class="btn btn-primary btn-sm">Study Lesson 1.1: 50/30/20 Rule &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Native Modal: Certificate -->
+  <div id="cert-modal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>FinWise Academy Completion Certificate</h3>
+        <button id="btn-close-cert" class="close-btn">&times;</button>
+      </div>
+      <div class="cert-frame">
+        <img src="images/icon-course.svg" alt="Award Badge" class="cert-badge" onerror="this.style.display='none'">
+        <h4>Certificate of Financial Literacy</h4>
+        <p class="cert-subtitle">Presented for completing self-paced training</p>
+        <h2 id="cert-status-header">3 Micro-Courses In Progress</h2>
+        <p class="cert-details">Demonstrated practical competencies across Cash Flow Budgeting, Debt Payoff, and Compound Wealth Strategies.</p>
+        <div class="cert-meta">
+          <span>Date: <strong id="cert-date">--</strong></span>
+          <span>Verified: <strong id="cert-verified">Self-Paced Track</strong></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span id="cert-lesson-count">0 / 12 lessons complete</span>
+        <button id="btn-modal-dismiss" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast hidden">Progress saved!</div>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 FinWise Academy. </p>
+      <p><a href="lesson.html" class="footer-link">Resume Active Lesson</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts: Data first, then Application logic -->
+  <script src="data/courses.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

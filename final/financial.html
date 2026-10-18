@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Glossary | FinWise Academy</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-mark">Fin</span>Wise Academy
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Courses</a>
+        <a href="lesson.html">Active Lesson</a>
+        <a href="budget-lab.html">Budget Lab</a>
+        <a href="financial.html" class="active">Glossary</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="progress-pill">
+          <span class="pill-label">Progress:</span>
+          <span id="nav-overall-pct" class="pill-value">0%</span>
+        </div>
+        <button id="btn-open-cert" class="btn btn-outline-sm">Certificate</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Plain-English Glossary -->
+  <section id="glossary" class="section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="tag-badge">Reference Guide</span>
+        <h2>Financial Vocabulary Cheat Sheet</h2>
+        <p>Key terms used across the three micro-courses defined in plain English without jargon.</p>
+        <div class="search-box">
+          <input type="text" id="glossary-search" placeholder="Filter terms (e.g., APR, Index Fund, DCA, Avalanche)...">
+        </div>
+      </div>
+
+      <div id="glossary-grid" class="glossary-grid">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Native Modal: Certificate -->
+  <div id="cert-modal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>FinWise Academy Completion Certificate</h3>
+        <button id="btn-close-cert" class="close-btn">&times;</button>
+      </div>
+      <div class="cert-frame">
+        <img src="images/icon-course.svg" alt="Award Badge" class="cert-badge" onerror="this.style.display='none'">
+        <h4>Certificate of Financial Literacy</h4>
+        <p class="cert-subtitle">Presented for completing self-paced training</p>
+        <h2 id="cert-status-header">3 Micro-Courses In Progress</h2>
+        <p class="cert-details">Demonstrated practical competencies across Cash Flow Budgeting, Debt Payoff, and Compound Wealth Strategies.</p>
+        <div class="cert-meta">
+          <span>Date: <strong id="cert-date">--</strong></span>
+          <span>Verified: <strong id="cert-verified">Self-Paced Track</strong></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span id="cert-lesson-count">0 / 12 lessons complete</span>
+        <button id="btn-modal-dismiss" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast hidden">Progress saved!</div>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 FinWise Academy. </p>
+      <p><a href="index.html" class="footer-link">Back to Courses Overview</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts: Data first, then Application logic -->
+  <script src="data/courses.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

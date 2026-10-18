@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Lesson | FinWise Academy</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="page-dark">
+
+  <!-- Site Navigation Header -->
+  <header class="navbar navbar-dark">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo logo-light">
+        <span class="logo-mark">Fin</span>Wise Academy
+      </a>
+
+      <nav class="nav-links nav-links-dark">
+        <a href="index.html">Courses</a>
+        <a href="lesson.html" class="active">Active Lesson</a>
+        <a href="budget-lab.html">Budget Lab</a>
+        <a href="financial.html">Glossary</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="progress-pill pill-dark">
+          <span class="pill-label">Progress:</span>
+          <span id="nav-overall-pct" class="pill-value">0%</span>
+        </div>
+        <button id="btn-open-cert" class="btn btn-outline-sm btn-outline-light">Certificate</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Self-Paced Micro-Lesson Player -->
+  <section id="player-section" class="section player-section">
+    <div class="container">
+      
+      <!-- Top Course Switcher Bar -->
+      <div class="player-topbar">
+        <div>
+          <span class="player-course-tag" id="player-course-label">Course 1</span>
+          <h2 id="player-course-title">The Cash Flow Engine</h2>
+        </div>
+        <div class="course-tabs" id="course-tabs-container">
+          <button class="course-tab active" data-course="0">Course 1</button>
+          <button class="course-tab" data-course="1">Course 2</button>
+          <button class="course-tab" data-course="2">Course 3</button>
+        </div>
+      </div>
+
+      <!-- Main Player Grid -->
+      <div class="player-grid">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="player-sidebar">
+          <div class="sidebar-header">
+            <h4>Lessons in Course</h4>
+            <span id="player-step-indicator">1 of 4</span>
+          </div>
+          <div class="lesson-items-list" id="lesson-items-container">
+            <!-- Injected by scripts/app.js -->
+          </div>
+          <div class="sidebar-footer-links">
+            <a href="budget-lab.html" class="sidebar-lab-link">&rarr; Open 50/30/20 Budget Lab</a>
+          </div>
+        </aside>
+
+        <!-- Active Lesson Canvas -->
+        <main class="player-main">
+          <div class="lesson-header-row">
+            <span id="lesson-tag" class="lesson-badge">Lesson 1.1</span>
+            <span id="lesson-status-pill" class="status-badge">Not Completed</span>
+          </div>
+
+          <h3 id="lesson-heading" class="lesson-title">Loading lesson...</h3>
+          <div id="lesson-article" class="lesson-body">
+            <!-- Article body -->
+          </div>
+
+          <!-- Practical Takeaway Callout -->
+          <div class="takeaway-box">
+            <span class="takeaway-label">Actionable Takeaway</span>
+            <p id="lesson-takeaway-text">Automate savings deposits on the same day pay arrives.</p>
+          </div>
+
+          <!-- Rapid Micro-Check Quiz -->
+          <div class="quiz-box">
+            <div class="quiz-header">
+              <span class="quiz-label">Knowledge Check</span>
+              <span id="quiz-status" class="quiz-status">Choose the best answer</span>
+            </div>
+            <p id="quiz-question" class="quiz-prompt"></p>
+            <div id="quiz-options" class="quiz-options-grid"></div>
+            <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+          </div>
+
+          <!-- Player Navigation Controls -->
+          <div class="player-actions">
+            <button id="btn-prev-lesson" class="btn btn-outline">Previous Lesson</button>
+            <div class="player-right-actions">
+              <button id="btn-complete-lesson" class="btn btn-secondary">Mark as Complete</button>
+              <button id="btn-next-lesson" class="btn btn-primary">Next Lesson &rarr;</button>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Native Modal: Certificate -->
+  <div id="cert-modal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>FinWise Academy Completion Certificate</h3>
+        <button id="btn-close-cert" class="close-btn">&times;</button>
+      </div>
+      <div class="cert-frame">
+        <img src="images/icon-course.svg" alt="Award Badge" class="cert-badge" onerror="this.style.display='none'">
+        <h4>Certificate of Financial Literacy</h4>
+        <p class="cert-subtitle">Presented for completing self-paced training</p>
+        <h2 id="cert-status-header">3 Micro-Courses In Progress</h2>
+        <p class="cert-details">Demonstrated practical competencies across Cash Flow Budgeting, Debt Payoff, and Compound Wealth Strategies.</p>
+        <div class="cert-meta">
+          <span>Date: <strong id="cert-date">--</strong></span>
+          <span>Verified: <strong id="cert-verified">Self-Paced Track</strong></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span id="cert-lesson-count">0 / 12 lessons complete</span>
+        <button id="btn-modal-dismiss" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast hidden">Progress saved!</div>
+
+  <footer class="footer footer-dark">
+    <div class="container footer-content">
+      <p>&copy; 2026 FinWise Academy. Self-Paced Micro-Learning Player.</p>
+      <p><a href="index.html" class="footer-link">Back to Courses Overview</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts: Data first, then Application logic -->
+  <script src="data/courses.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
