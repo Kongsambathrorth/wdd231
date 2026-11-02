@@ -31,7 +31,7 @@ main.main-content {
     padding: 1rem;
 }
 
-.content-container {
+.site-content-box {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -87,7 +87,7 @@ main.main-content {
 }
 
 /* Course Cards Grid */
-.course-card-list {
+.course-grid-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
