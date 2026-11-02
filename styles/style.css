@@ -189,11 +189,96 @@ header {
   }
 }
 
-/* Footer */
+
+/* Footer Layout */
 footer {
   background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-content,
+.footer-content2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-content p,
+.footer-content2 p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Social Media Icons */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer-icons a {
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Desktop Screens (Side-by-Side Footer Columns) */
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem;
+  }
+
+  .footer-content,
+  .footer-content2 {
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================
+   HERO SECTION STYLES
+   ========================================== */
+.hero-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow, 0 2px 6px -2px rgba(0, 0, 0, 0.4));
+}
+
+/* Responsive adjustment for larger screens */
+@media screen and (min-width: 768px) {
+  .hero-image {
+    height: 450px;
+  }
 }
