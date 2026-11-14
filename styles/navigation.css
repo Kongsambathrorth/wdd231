@@ -2,6 +2,7 @@
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem;
     background-color: var(--primary-color, #023047);
     color: white;
@@ -18,7 +19,7 @@ header {
     font-size: 1.5rem;
 }
 
-.main-navigation {
+.primary-nav {
     background-color: #011627;
 }
 
@@ -26,11 +27,13 @@ header {
     display: none; /* Hidden by default on mobile */
     flex-direction: column;
     list-style: none;
+    margin: 0;
+    padding: 0;
     background-color: #011627;
 }
 
 .nav-list.open {
-    display: flex;
+    display: flex; /* Shown when toggled by JavaScript */
 }
 
 .nav-list li a {
@@ -52,18 +55,17 @@ header {
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    margin-left: auto;
     padding: 0.5rem;
 }
 
+/* Desktop View (768px and wider) */
 @media screen and (min-width: 768px) {
     #hamburger-btn {
-        display: none;
+        display: none; /* Hide hamburger on large screens */
     }
 
-   
-    .main-navigation .nav-list {
-        display: flex;
+    .primary-nav .nav-list {
+        display: flex !important; /* Force display flex on desktop */
         flex-direction: row;
         justify-content: space-around;
     }

@@ -1,69 +1,48 @@
-// 1. Correct the URL to match where your file actually is
-const url = '/chamber/data/members.json';
+const url = 'data/members.json';
+const cardsContainer = document.querySelector('#members');
+const gridBtn = document.querySelector('#grid');
+const listBtn = document.querySelector('#list');
 
 async function getMemberData() {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error('Could not fetch data');
-        const data = await response.json();
-        displayMembers(data);
-    } catch (error) {
-        console.error(error);
-        const container = document.getElementById('business-cards');
-        if (container) {
-            container.innerHTML = `<p class="error">Error loading member data: ${error.message}</p>`;
-        }
-    }
+  const response = await fetch(url);
+  const data = await response.json();
+  displayMembers(data);
 }
 
-function displayMembers(members) {
-    const cards = document.getElementById('business-cards');
-    if (!cards) return; // Safety check
+const displayMembers = (members) => {
+  cardsContainer.innerHTML = ''; // Clear container
 
-    cards.innerHTML = "";
+  members.forEach((member) => {
+    const card = document.createElement('section');
+    card.classList.add('member-card');
 
-    members.forEach((member) => {
-        let card = document.createElement('section');
-        card.classList.add('business-card');
+    // Convert numeric membership to readable label
+    const levels = { 1: 'Member', 2: 'Silver', 3: 'Gold' };
+    const levelLabel = levels[member.membership] || 'Member';
 
-        // Note: Ensure your images are in the /images/ folder
-        card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
-            <div class="card-details">
-                <h3>${member.name}</h3>
-                <p class="address">${member.address}</p>
-                <p class="phone">${member.phone}</p>
-                <a href="${member.website}" target="_blank">Visit Website</a>
-                <p class="membership">Level: ${getMembershipName(member.membershipLevel)}</p>
-            </div>
-        `;
-        cards.appendChild(card);
-    });
-}
+    card.innerHTML = `
+      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="150" height="150">
+      <h3>${member.name}</h3>
+      <p class="tagline">${member.tagline}</p>
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
+      <p><a href="${member.website}" target="_blank" rel="noopener">Visit Website</a></p>
+      <span class="badge level-${member.membership}">${levelLabel}</span>
+    `;
 
-// Helper function to make membership levels readable
-function getMembershipName(level) {
-    const levels = { 1: "Member", 2: "Silver", 3: "Gold" };
-    return levels[level] || "Non-Profit";
-}
+    cardsContainer.appendChild(card);
+  });
+};
 
-// Logic for Grid vs List Toggle
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-const display = document.querySelector("#business-cards");
+// Toggle Grid and List views
+gridBtn.addEventListener('click', () => {
+  cardsContainer.classList.add('grid');
+  cardsContainer.classList.remove('list');
+});
 
-if (gridbutton && listbutton && display) {
-    gridbutton.addEventListener("click", () => {
-        // These classes should match your CSS selectors exactly
-        display.classList.add("grid");
-        display.classList.remove("list");
-    });
+listBtn.addEventListener('click', () => {
+  cardsContainer.classList.add('list');
+  cardsContainer.classList.remove('grid');
+});
 
-    listbutton.addEventListener("click", () => {
-        display.classList.add("list");
-        display.classList.remove("grid");
-    });
-}
-
-// Only call the function once
 getMemberData();
