@@ -1,11 +1,4 @@
-@media screen and (min-width: 768px) {
-    /* Main Content Layout (3 parts Course Work, 1 part Phnom Penh) */
-    .content-container {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        gap: 1.5rem;
-        align-items: start;
-    }
+
 
     .location-section {
         margin: 0;
@@ -22,5 +15,16 @@
 @media screen and (min-width: 768px) {
     div.grid {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop matching wireframes */
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* About Me takes 2 parts, Student Photo takes 1 part */
+        gap: 2rem;
+        align-items: start;
     }
 }

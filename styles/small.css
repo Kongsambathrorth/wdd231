@@ -184,3 +184,97 @@ div.list .business-card {
 div.list .business-card img {
     display: none; 
 }
+
+/* Course Grid Layout */
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.course-card {
+    background-color: #e2e8f0; /* Default uncompleted background */
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #cbd5e1;
+    font-weight: 600;
+}
+
+/* Style for completed courses (e.g., green tint or accent color) */
+.course-card.completed {
+    background-color: #bbf7d0; /* Soft green for completed */
+    border-color: #22c55e;
+    color: #14532d;
+}
+
+/* Filter Button Styles */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    background-color: #334155;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.filter-btn.active {
+    background-color: #0284c7; /* Highlight active filter */
+}
+
+.credit-display {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+.card {
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    background-color: #0f172a;
+    color: white;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.card p, .card img {
+    padding: 1rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Inverts the black logo to white */
+.logo-box img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: invert(1) brightness(2);
+}
