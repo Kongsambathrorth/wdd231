@@ -18,3 +18,9 @@
         gap: 1.2rem;
     }
 }
+
+@media screen and (min-width: 768px) {
+    div.grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop matching wireframes */
+    }
+}

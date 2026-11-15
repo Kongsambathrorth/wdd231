@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Local Coffee Roasters",
+    "tagline": "Freshly Roasted Daily",
+    "address": "123 Main Street, Takhmau",
+    "phone": "(855) 123-4567",
+    "website": "https://example.com",
+    "image": "coffee.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Riverfront Tech Solutions",
+    "tagline": "Modern IT & Cloud Services",
+    "address": "456 Market Ave, Takhmau",
+    "phone": "(855) 234-5678",
+    "website": "https://example.org",
+    "image": "tech.jpg",
+    "membership": 2
+  }
+]

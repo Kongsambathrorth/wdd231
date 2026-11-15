@@ -9,7 +9,7 @@
     <meta name="author" content="Sambathrorth Kong">
     <meta name="theme-color" content="#023047">
     
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <meta property="og:title" content="Chamber Business Directory - Cambodian Chamber of Commerce">
     <meta property="og:description" content="Explore local business members of the Cambodian Chamber of Commerce.">
     <meta property="og:image" content="https://kongsambathrorth.github.io/wdd231/chamber/images/logo.png">
@@ -21,30 +21,28 @@
 
     <title>Business Directory - Cambodian Chamber of Commerce</title>
     
-    <!-- Fixed stylesheet paths (removed leading /chamber/) -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/navigation.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/navigation.css">
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/medium.css">
+    <link rel="stylesheet" href="../styles/large.css">
 </head>
 
 <body>
     <header>
-        <!-- Fixed logo path -->
-        <img class="logo-profile" src="images/logo.png" alt="Cambodian Chamber Logo">
+        <img class="logo-profile" src="../images/logo.png" alt="Cambodian Chamber Logo">
         <h1 class="header-title">Cambodian Chamber</h1>
         <button id="hamburger-btn" aria-label="Toggle navigation menu">&#9776;</button>
     </header>
 
     <div>
-
         <nav class="primary-nav">
             <ul class="nav-list">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="chamber/directory.html">Chamber Project</a></li>
-            <li><a href="#">Final Project</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </div>
@@ -65,11 +63,11 @@
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 
-    <!-- Fixed script paths (removed leading /chamber/) -->
-    <script src="scripts/script.js" defer></script>
-    <script src="scripts/fetchweather.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
+    <script src="../scripts/directory.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/script.js" defer></script>
+    
 </body>
 
 </html>
